@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Baixe o App Leitor de Comanda</title>
+<style>
+:root{--bg:#fff8f0;--surface:#ffffff;--text:#2a1f17;--muted:#6f6258;--accent:#e4572e;--accent-text:#fff;--border:#f0e1d2;--dark-btn:#1b1b1b;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#17120e;--surface:#241c16;--text:#f6ece2;--muted:#b3a496;--accent:#ff7a4d;--accent-text:#1b0f08;--border:#3a2e25;--dark-btn:#000;color-scheme:dark}}
+:root[data-theme="dark"]{--bg:#17120e;--surface:#241c16;--text:#f6ece2;--muted:#b3a496;--accent:#ff7a4d;--accent-text:#1b0f08;--border:#3a2e25;--dark-btn:#000;color-scheme:dark}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--text);font-family:"Segoe UI",system-ui,-apple-system,Roboto,sans-serif;line-height:1.55}
+.wrap{max-width:960px;margin:0 auto;padding:24px 20px}
+header{display:flex;align-items:center;gap:10px;font-weight:700;font-size:1.1rem}
+.logo{width:36px;height:36px;border-radius:10px;background:var(--accent);color:var(--accent-text);display:grid;place-items:center;font-size:1.2rem}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:32px;align-items:center;padding:40px 0}
+h1{font-size:clamp(2rem,5vw,3.1rem);line-height:1.1;margin:0 0 14px}
+h1 span{color:var(--accent)}
+.lead{color:var(--muted);font-size:1.1rem;margin:0 0 24px}
+.stores{display:flex;flex-wrap:wrap;gap:12px}
+.store{display:flex;align-items:center;gap:10px;background:var(--dark-btn);color:#fff;text-decoration:none;padding:10px 18px;border-radius:12px;border:1px solid var(--border);min-width:170px}
+.store small{display:block;font-size:.7rem;opacity:.8;line-height:1.1}
+.store strong{font-size:1.05rem;line-height:1.2}
+.store .ic{font-size:1.5rem}
+.store:hover{outline:2px solid var(--accent)}
+.store.soon{opacity:.55;pointer-events:none}
+.store.main{background:var(--accent);color:var(--accent-text);border-color:var(--accent)}
+.apk{display:inline-block;margin-top:14px;color:var(--muted);font-size:.9rem}
+.apk a{color:var(--accent)}
+.phone{justify-self:center;width:230px;aspect-ratio:9/18;background:var(--surface);border:8px solid var(--text);border-radius:34px;padding:18px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:16px;box-shadow:0 20px 40px rgba(0,0,0,.15)}
+.scan{width:130px;height:130px;border:3px dashed var(--accent);border-radius:16px;display:grid;place-items:center;font-size:3rem;position:relative}
+.scan::after{content:"";position:absolute;left:8px;right:8px;top:50%;height:3px;background:var(--accent);border-radius:2px}
+.phone p{margin:0;text-align:center;font-weight:600}
+.phone em{font-style:normal;color:var(--muted);font-size:.85rem;font-weight:400}
+h2{font-size:1.5rem;margin:40px 0 18px}
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:16px}
+.card{background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:20px}
+.card .n{width:34px;height:34px;border-radius:50%;background:var(--accent);color:var(--accent-text);display:grid;place-items:center;font-weight:700;margin-bottom:10px}
+.card h3{margin:0 0 6px;font-size:1.05rem}
+.card p{margin:0;color:var(--muted);font-size:.95rem}
+details{background:var(--surface);border:1px solid var(--border);border-radius:12px;padding:14px 18px;margin-bottom:10px}
+summary{cursor:pointer;font-weight:600}
+details p{margin:10px 0 0;color:var(--muted)}
+footer{border-top:1px solid var(--border);margin-top:40px;padding-top:20px;color:var(--muted);font-size:.9rem;text-align:center}
+@media (max-width:720px){.hero{grid-template-columns:1fr;padding:24px 0}.phone{width:190px}}
+</style>
+</head>
+<body>
+<div class="wrap">
+  <header><div class="logo">🧾</div>Leitor de Comanda</header>
+
+  <section class="hero">
+    <div>
+      <h1>Sua comanda na palma da mão, <span>sem fila</span>.</h1>
+      <p class="lead">Baixe o app, aponte a câmera para o QR Code da sua comanda e acompanhe consumo e total em tempo real.</p>
+      <div class="stores">
+        <a class="store main" href="https://github.com/rllinsdev/APK-Comanda/releases/download/v1.0.0/app-arm64-v8a-release.apk" id="android" rel="noopener" aria-label="Baixar para Android"><span class="ic">🤖</span><span><small>Baixar para</small><strong>Android (APK)</strong></span></a>
+        <span class="store soon" aria-disabled="true"><span class="ic">🍎</span><span><small>iPhone</small><strong>Em breve</strong></span></span>
+        <a class="store" href="https://github.com/rllinsdev/APK-Comanda/releases/latest" target="_blank" rel="noopener noreferrer"><span class="ic">📂</span><span><small>Alternativa</small><strong>Página de downloads</strong></span></a>
+      </div>
+      <span class="apk">Arquivo de 29,7 MB · <strong>Se o download falhar</strong>, abra esta página no <strong>Chrome</strong> (menu ⋮ → “Abrir no Chrome”) ou copie o link: <br><code style="word-break:break-all;user-select:all">https://github.com/rllinsdev/APK-Comanda/releases/latest</code></span>
+    </div>
+    <div class="phone" aria-hidden="true">
+      <div class="scan">🧾</div>
+      <p>Aponte para a comanda<br><em>Leitura automática</em></p>
+    </div>
+  </section>
+
+  <h2>Como usar</h2>
+  <div class="grid">
+    <div class="card"><div class="n">1</div><h3>Baixe o app</h3><p>Toque em “Baixar para Android” e abra o arquivo quando o download terminar.</p></div>
+    <div class="card"><div class="n">2</div><h3>Escaneie a comanda</h3><p>Permita o acesso à câmera e aponte para o código da sua comanda.</p></div>
+    <div class="card"><div class="n">3</div><h3>Acompanhe e pague</h3><p>Veja os itens, o total e finalize no caixa de forma rápida.</p></div>
+  </div>
+
+  <h2>Dúvidas frequentes</h2>
+  <details open><summary>Como instalar o APK no Android?</summary><p>Ao abrir o arquivo baixado, o Android pode pedir permissão para instalar apps de fontes desconhecidas. Toque em “Configurações”, ative a opção para o seu navegador e volte para concluir a instalação. Depois você pode desativar a permissão novamente.</p></details>
+  <details><summary>O app é gratuito?</summary><p>Sim, o download e o uso do app não têm custo para o cliente.</p></details>
+  <details><summary>Preciso de internet?</summary><p>Sim, uma conexão de dados ou Wi-Fi é necessária para consultar sua comanda atualizada.</p></details>
+  <details><summary>A câmera não está lendo o código. E agora?</summary><p>Verifique se há boa iluminação, limpe a lente e mantenha o código centralizado. Se persistir, peça ajuda a um atendente.</p></details>
+  <details><summary>Quais celulares são compatíveis?</summary><p>Celulares Android com processador de 64 bits (a maioria dos aparelhos atuais). A versão para iPhone ainda não está disponível.</p></details>
+
+  <footer>Precisa de ajuda? Fale com um atendente do estabelecimento.</footer>
+</div>
+</body>
+</html>
